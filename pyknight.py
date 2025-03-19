@@ -135,6 +135,9 @@ while True:
                     print(f"You dealt {playerdam1} damage!")
                     print(f"{mstrstts[mstrenc]}, LVL {randommstrlvl}")
                     print(f"HP: {mstr1hpcurrent}/{mstrstts[mstrenc + 4] + round(randommstrlvl / 10)}, DEF: {mstrstts[mstrenc + 5]}")
+                elif battleopt == "2":
+                    print"You flee'd the battle!"
+                    break
             else:
                 print(f"The {mstrstts[mstrenc]} outsped you!")
                 mstrdam1 = mstrstts[mstrenc + 6] - playerstts[8]
