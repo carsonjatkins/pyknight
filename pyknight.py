@@ -143,8 +143,7 @@ while True:
             else:
                 print(f"The {mstrstts[mstrenc]} outsped you!")
                 mstrdam1 = mstrstts[mstrenc + 6] - playerstts[8]
-                print(f"The {mstrstts[mstrenc]} dealt 
-                      {mstrdam1} damage!")
+                print(f"The {mstrstts[mstrenc]} dealt {mstrdam1} damage!")
         print("---------------------------------")
     elif storyopt1 == "4":
         sleeprestore = playerstts[7] - playerstts[6]
