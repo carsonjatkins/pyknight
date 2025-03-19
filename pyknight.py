@@ -128,13 +128,13 @@ while True:
             if int(mstrstts[mstrenc + 7] + round(randommstrlvl / 10)) > playerstts[13] or int(mstrstts[mstrenc + 7] + round(randommstrlvl / 10)) == playerstts[13]:
                 print(f"what will {playerstts[1]} do?")
                 print(f"[1] Attack | {playerstts[9] - mstrstts[mstrenc + 5]}+")
-                print(f"[2] Magic  |")
-                print(f"[3] Item   |")
-                print(f"[4] Flee   |")
+                print(f"[2] Flee   |")
                 battleopt = input("")
                 if battleopt == "1":
                     playerdam1 = playerstts[9] - mstrstts[mstrenc + 5] + random.randint[0, 2]
                     print(f"You dealt {playerdam1} damage!")
+                    print(f"{mstrstts[mstrenc]}, LVL {randommstrlvl}")
+                    print(f"HP: {mstr1hpcurrent}/{mstrstts[mstrenc + 4] + round(randommstrlvl / 10)}, DEF: {mstrstts[mstrenc + 5]}")
             else:
                 print(f"The {mstrstts[mstrenc]} outsped you!")
                 mstrdam1 = mstrstts[mstrenc + 6] - playerstts[8]
@@ -142,7 +142,12 @@ while True:
                       {mstrdam1} damage!")
         print("---------------------------------")
     elif storyopt1 == "4":
-        sleep()
+        sleeprestore = playerstts[7] - playerstts[6]
+        if sleeprestore == 0:
+            sleeprestore = "no"
+        print(f"You slept and restored {sleeprestore} HP!")
+        print(f"HP: {playerstts[6]}/{playerstts[7]}")
+        print("---------------------------------")
     elif storyopt1 == "q":
         break
     else:
