@@ -107,7 +107,9 @@ while True:
     if storyopt1 == "1":
         checkplayerstts()
     elif storyopt1 == "2":
-        checkplayerinv()
+        print("Your inventory:")
+        print("    Stick")
+        print("    Cloth Tunic")
     elif storyopt1 == "3":
         mstrwheel = random.randint(1,100)
         if mstrwheel > 0 and mstrwheel < 41:
