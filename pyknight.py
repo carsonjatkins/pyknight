@@ -70,45 +70,27 @@ print("Pyknight v2.1")
 print("---------------------------------")
 #load/save/naming
 while True:
-    if playerstts[1] == "Default":
-        print("Will you load a save file, or start a new one? (l/n):")
-        ln = input("")
-        if ln == "l":
-            storyword = "continue"
-            print("---------------------------------")
-            print("Save loaded (placholder)")
-            break
-        elif ln == "n":
-            storyword = "start"
-            print("---------------------------------")
-            print("New save started!")
-            while True:
-                print("Name your character: (16 or less characters) ")
-                playerstts[1] = input("")
+    print("Name your character: (16 or less characters) ")
+    playerstts[1] = input("")
+    print("---------------------------------")
+    if len(playerstts[1]) < 17:
+        if len(playerstts[1]) > 0:
+            if playerstts[1] == "Default":
+                print("Invalid character name.")
+                print("Please try a new name.")
                 print("---------------------------------")
-                if len(playerstts[1]) < 17:
-                    if len(playerstts[1]) > 0:
-                        if playerstts[1] == "Default":
-                            print("Invalid character name.")
-                            print("Please try a new name.")
-                            print("---------------------------------")
-                        else:
-                            break
-                    else:
-                        print("The name entered contains no characters.")
-                        print("Please try a new name.")
-                        print("---------------------------------")
-                else:
-                    print("The name entered contains more than 16 characters.")
-                    print("Please try a new name.")
-                    print("---------------------------------")
+            else:
+                break
         else:
-            print("---------------------------------")
-            print("Invalid Input, please try again.")
+            print("The name entered contains no characters.")
+            print("Please try a new name.")
             print("---------------------------------")
     else:
-        break
+        print("The name entered contains more than 16 characters.")
+        print("Please try a new name.")
+        print("---------------------------------")
 print(f"Welcome to Pyknight, {playerstts[1]}!")
+storyword = "start"
 print("---------------------------------")
 checkplayerstts()
 print("---------------------------------")
