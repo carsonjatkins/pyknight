@@ -138,7 +138,7 @@ while True:
                     print(f"{mstrstts[mstrenc]}, LVL {randommstrlvl}")
                     print(f"HP: {mstr1hpcurrent}/{mstrstts[mstrenc + 4] + round(randommstrlvl / 10)}, DEF: {mstrstts[mstrenc + 5]}")
                 elif battleopt == "2":
-                    print"You flee'd the battle!"
+                    print("You fled the battle!")
                     break
             else:
                 print(f"The {mstrstts[mstrenc]} outsped you!")
